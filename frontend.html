@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<style>
+    body{
+        place-items: center;
+        display: grid;
+    }
+    p{
+        font-size: 19px;
+        font-family:Poppins ;
+        width: auto;
+        margin-top: 5%;
+    }
+
+    input::placeholder{
+        font-weight: 500;
+        font-size: 16px;
+        
+        width: 300px;
+        
+        
+        
+    }
+    h2{
+        font-family: Poppins;
+        margin-top: 10%;
+    }
+    .main-div{
+        margin-top: 5%;
+        background-color: rgba(255, 171, 37, 0.286);
+        height: 500px;
+        width: 800px;
+        padding: 0px;
+        display: flex;
+        text-align: center;
+        
+
+        
+    }
+    .pet-pic{
+        height: 500px;
+        width: 400px;
+        object-fit: cover;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);;
+        
+    }
+    .img{
+        flex: 1;
+        
+    }
+    
+    .login{
+        margin-left: 5%;
+        flex: 1;
+        text-align: left;
+        width: 200px;
+        height: 100px;
+        
+
+    }
+    .login input {
+        width: calc(100% - 20px);
+        height: 30px; /* Adjusted text box size */
+        border: none;
+        border-radius: 1%;
+        border-style: none;
+        margin-bottom: 10px;
+    }
+    .otp-button {
+        width: 50%;
+        padding: 10px;
+        background-color: #f9a33a;
+        color: white;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="main-div">
+        <div class="img">
+            <img class="pet-pic" src="pet.jpg">
+        </div>
+        <div class="login">
+        <h2>CREATE AN ACCOUNT</h2>
+        <p class="Name"> Full Name </p>
+        <input type="text" placeholder="Enter Your Full Name">
+        <p class="mail">Email-Id</p>
+        <input type="email" placeholder="example@gmail.com">
+        <p class="number"> Mobile Number</p>
+        <input type="number" placeholder="+91 Your Valid Mobile Number">
+        <button class="otp-button" oneclick="getOTP()">GET OTP</button>
+        </div>
+        
+    </div>
+    <script>
+        function getOTP() {
+            // Simulate sending OTP (replace this with actual backend logic)
+            alert("OTP sent successfully!");
+        }
+    </script>
+</body>
+</html>
