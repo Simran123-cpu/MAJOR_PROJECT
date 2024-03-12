@@ -92,23 +92,23 @@
         cursor: pointer;
     }
     
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 850px) {
         .main-div {
-            width: auto; /* Adjust width for smaller screens */
+            width: auto/* Adjust width for smaller screens */
         }
 
         .img {
-            
-            display: none;/* Hide image container for smaller screens */
+            visibility: hidden;
+            /* Hide image container for smaller screens */
         }
 
         .login {
             width: 100%; /* Set full width for form container on smaller screens */
         }
     }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 200px) {
     .img {
-        display: block; /* Show image for larger screens */
+        display: flex; /* Show image for larger screens */
     }
 }
 </style>
