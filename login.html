@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<style>
+    body{
+        place-items: center;
+        display: grid;
+    }
+    p{
+        font-size: 19px;
+        font-family:Poppins ;
+        width: auto;
+        margin-top: 3%;
+        margin-bottom: 10px;
+    }
+
+    
+    
+    h2{
+        font-family: Poppins;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+    a{
+        text-decoration: none;
+        color:blue ;
+    }
+    .main-div{
+        margin-top: 5%;
+        background-color: rgba(255, 171, 37, 0.286);
+        height: 500px;
+        width: 900px;
+        padding: 0px;
+        display: flex;
+        text-align: center;
+        transition: width 0.5s;
+        
+        
+
+        
+    }
+    .pet-pic{
+        height: 500px;
+        width: 700px;
+        object-fit: cover;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);;
+        order: 1;
+    }
+    .img{
+        flex: 1;
+        overflow: hidden;
+        transition: flex 0.5s;
+        order: 1;
+    }
+    
+    .login{
+        margin-left: 0%;
+        margin-right: 0%;
+        flex: 1;
+        text-align: left;
+        width: 100px;
+        height: 100px;
+        order: 2;
+        padding: 2%;
+        
+
+    }
+
+    .login input {
+        width: calc(100% - 70px);
+        height: 30px; /* Adjusted text box size */
+        border: none;
+        border-radius: 1%;
+        border-style: none;
+        margin-bottom: 5%;
+        margin-left: 0%;
+
+    }
+    .otp-button {
+        width: 50%;
+        padding: 10px;
+        background-color: #f9a33a;
+        color: white;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 850px) {
+        .main-div {
+            width: auto/* Adjust width for smaller screens */
+        }
+
+        .img {
+            visibility: hidden;
+            /* Hide image container for smaller screens */
+        }
+
+        .login {
+            width: 100%; /* Set full width for form container on smaller screens */
+        }
+    }
+    @media screen and (min-width: 200px) {
+    .img {
+        display: flex; /* Show image for larger screens */
+    }
+}
+</style>
+
+<body>
+    <div class="main-div">
+        <div class="img">
+            <img class="pet-pic" src="login-pet.jpg">
+        </div>
+        <div class="login">
+        <h2>Log-In</h2>
+        <p class="number"> Mobile Number</p>
+        <input type="number" placeholder="+91 Your Valid Mobile Number">
+        <button class="otp-button" onclick="getOTP()">GET OTP</button>
+        <p style="margin-top:30% ;">Don't have an account?<a href=# >SIGN-UP</a></p>
+        </div>
+        
+    </div>
+    <script>
+    function getOTP() {
+    // Simulate asynchronous request to a backend
+    setTimeout(function() {
+        // After a delay, show a success message
+        alert("OTP sent successfully!");
+    }, 2000); // Simulate a 2-second delay
+}
+
+    </script>
+</body>
+</html>
